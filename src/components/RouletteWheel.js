@@ -1,15 +1,15 @@
 import React from 'react';
 import ExerciseWheel from './ExerciseWheel.js';
-import './RouletteWheel.css';
+// import './RouletteWheel.css';
 
 const RouletteWheel = () => {
   return(
     <div className="Games-page">
-      <div className="side-bar"></div>
-      <div className="Game-Container">
+      {/* <div className="side-bar">Ready to start?</div> */}
+      {/* <div className="Game-Container"> */}
         <ExerciseWheel />
-      </div>      
-      <div className="side-bar"></div>
+      {/* </div>       */}
+      {/* <div className="side-bar"></div> */}
     </div>
   );
 }

@@ -1,21 +1,22 @@
 import React from 'react';
 import './ExerciseWheel.css';
 class ExerciseWheel extends React.Component {
-    state = {
-      name: "circle"
-    }
-    
-    startRotation = () => {
-      this.setState({
-        name: "circle start-rotate"
-      });
-       setTimeout(() => {
-        this.setState({name: "circle start-rotate stop-rotate"});
-      }, Math.floor(Math.random() * 10000) + 1);
-    }
-    render() {
-      return(
-        <div>
+  state = {
+    name: "circle"
+  }
+
+  startRotation = () => {
+    this.setState({
+      name: "circle start-rotate"
+    });
+    setTimeout(() => {
+      this.setState({ name: "circle start-rotate stop-rotate" });
+    }, Math.floor(Math.random() * 10000) + 1);
+  }
+  render() {
+    return (
+      <div>
+        <div className='roulette-container'>
           <div className="triangle-down"></div>
           <ul className={this.state.name} >
             <li className="wheel-part">
@@ -55,11 +56,12 @@ class ExerciseWheel extends React.Component {
               <div className="text">cardio</div>
             </li>
           </ul>
-          <button onClick={this.startRotation} className="spin-button" >SPIN</button>
         </div>
-      );
-    }
+        <button onClick={this.startRotation} className="spin-button" >SPIN</button>
+      </div>
+    );
   }
+}
 
 export default ExerciseWheel;
 
@@ -71,7 +73,7 @@ export default ExerciseWheel;
 //   state = {
 //     name: "circle"
 //   }
-  
+
 //   startRotation = () => {
 //     this.setState({
 //       name: "circle start-rotate"
