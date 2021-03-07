@@ -1,0 +1,127 @@
+/* צריך לשנות הכל כדי להתאים לשלי */
+.Games-page {
+    display: flex;
+  }
+  .side-bar {
+    width: 20%;
+    background-size: 100%;
+    background-color: white;
+    margin-top: 100px;
+  }
+  .Games-Container {
+    margin-top: 100px;
+    width: 60%;
+    background-size: 100%;
+    /* background-color: white; */
+    border: 2px solid grey;
+    padding: 3px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Game-Container {
+    margin-top: 55px;
+    width: 60%;
+    /* border-top: 5px solid red;
+    border-radius: 30%;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    border-bottom: 5px solid red;
+    background-color: rgb(243, 236, 236); */
+  }
+  .Games-Container h2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .game-icon {
+    width: 250px;
+    height: 208px;
+    background-color: white;
+    margin: 4px;
+    border: 2px solid black;
+  }
+  .game-name h3 {
+    background-color: purple;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    color: white;  
+    padding: 0;
+    margin: 0;
+  }
+  
+  .game-image img {
+   width: 250px;
+   height: 166px;
+   cursor: pointer;
+  }
+  .contact-container {
+    border-radius: 5px;
+    background-color: #5262a4;
+    padding: 20px;
+  }
+  .contact-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  @media only screen and (max-width: 768px) {
+    .Games-page {
+    display: block;
+  }
+    .side-bar {
+    width: 100%;
+    height: 50px;
+    background-size: 100%;
+    background-color: white;
+    margin-top: 0px;
+  }
+  .Games-Container {
+    margin-top: 100px;
+    width: 90%;
+    height: auto;
+    background-size: 100%;
+    /* background-color: white; */
+    padding: 10px;
+    margin: 10px;
+  }
+  .Game-Container {
+    margin-top: 0px;
+    width: 90%;
+    /* border-top: 5px solid red;
+    border-radius: 30%;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+    border-bottom: 5px solid red;
+    background-color: none; */
+    
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .game-icon {
+    width: 250px;
+    height: 208px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid blue;
+  }
+  .game-name h3 {
+    background-color: purple;
+    width: 250px;
+    height: 40px;
+    text-align: center;
+    color: white;  
+    padding: 0;
+    margin: 0;
+  }
+  
+  .game-image img {
+   width: 248px;
+   height: 166px;
+   cursor: pointer;
+  }
+  }
