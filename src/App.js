@@ -8,7 +8,9 @@ function App() {
   return (
     <div className="App">
       {/* <Logo src='' /> */}
-      
+      <div> logo component: will power</div>
+      <div> filter-box component: tabata / reps / random</div>
+      <div> open personal zone </div>
       <ExerciseWheel />
     </div>
   );
