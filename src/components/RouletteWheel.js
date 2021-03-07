@@ -1,5 +1,5 @@
 import React from 'react';
-import TruthOrDare from './truthOrDareComp.js';
+import ExerciseWheel from './ExerciseWheel.js';
 import './RouletteWheel.css';
 
 const RouletteWheel = () => {
@@ -7,7 +7,7 @@ const RouletteWheel = () => {
     <div className="Games-page">
       <div className="side-bar"></div>
       <div className="Game-Container">
-        <TruthOrDare />
+        <ExerciseWheel />
       </div>      
       <div className="side-bar"></div>
     </div>
