@@ -3,51 +3,51 @@
 }
 
 .wheel-part:first-child .text {
-    background-color: violet;
+    background-color: rgba(238, 130, 238, 0.568);
 }
 
 .wheel-part:nth-child(2) .text {
-    background-color: yellow;
+    background-color: rgba(255, 255, 0, 0.548);
 }
 
 .wheel-part:nth-child(3) .text {
-    background: rgb(82, 204, 129);
+    background: rgba(82, 204, 129, 0.596);
 }
 
 .wheel-part:nth-child(4) .text {
-    background: red;
+    background: rgba(255, 0, 0, 0.603);
 }
 
 .wheel-part:nth-child(5) .text {
-    background: violet;
+    background: rgba(238, 130, 238, 0.589);
 }
 
 .wheel-part:nth-child(6) .text {
-    background: yellow;
+    background: rgba(255, 255, 0, 0.603);
 }
 
 .wheel-part:nth-child(7) .text {
-    background: rgb(82, 204, 129);
+    background: rgba(82, 204, 129, 0.507);
 }
 
 .wheel-part:nth-child(8) .text {
-    background: red;
+    background: rgba(255, 0, 0, 0.582);
 }
 
 .wheel-part:nth-child(9) .text {
-    background: indigo;
+    background: rgba(76, 0, 130, 0.589);
 }
 
 .wheel-part:nth-child(10) .text {
-    background: blue;
+    background: rgba(0, 0, 255, 0.63);
 }
 
 .wheel-part:nth-child(11) .text {
-    background: green;
+    background: rgba(0, 128, 0, 0.562);
 }
 
 .wheel-part:nth-child(12) .text {
-    background: yellow;
+    background: rgba(99, 223, 196, 0.616);
 }
 
 .wheel-part:first-child {
@@ -158,7 +158,7 @@
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 50px solid black;
-    left: 50%;
+    left: 52%;
     z-index: 1;
     margin-left: auto;
     margin-right: auto;
