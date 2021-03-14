@@ -9,7 +9,7 @@ class Dialog extends React.Component {
                 <div>
                     <h1>you just won {this.props.winnerItem} exercise!</h1>
                     <p>would you like to start?</p>
-                    <button>YES! let's start!</button>
+                    <button>YES! I'm ready!</button>
                     <button>Nope, let's try again</button>
                 </div>
             </div>
