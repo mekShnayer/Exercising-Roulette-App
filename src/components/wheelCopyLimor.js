@@ -18,7 +18,7 @@ function Wheel({
         setTimeout(() => {
             onSpinningFinished(selectedItem)
         }, spinningDuration * 1000)
-    }
+    } 
 
     const wheelVars = {
         '--nb-item': items.length,
