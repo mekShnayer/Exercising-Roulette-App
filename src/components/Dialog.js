@@ -5,8 +5,13 @@ class Dialog extends React.Component {
         return (
             <div className='dialog-box'>
                 <button className='dialog-close-button'
-                onClick={this.props.onClose}>x</button>
-                <div>I'm a dialog, you just won {this.props.winnerItem} exercise!</div>
+                    onClick={this.props.onClose}>x</button>
+                <div>
+                    <h1>you just won {this.props.winnerItem} exercise!</h1>
+                    <p>would you like to start?</p>
+                    <button>YES!</button>
+                    <button>Nope, let's try again</button>
+                </div>
             </div>
         )
     }
