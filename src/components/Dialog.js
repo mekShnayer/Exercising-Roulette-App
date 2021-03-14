@@ -4,7 +4,7 @@ class Dialog extends React.Component {
     render() {
         return (
             <div>
-                I'm a dialog
+                I'm a dialog, you just won {this.props.winnerItem} exercise!
             </div>
         )
     }

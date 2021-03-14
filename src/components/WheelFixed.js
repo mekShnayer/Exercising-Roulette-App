@@ -1,5 +1,6 @@
 import React from 'react';
 import './WheelFixed.css';
+import Dialog from './Dialog';
 
 const exercises = [
     '0',
@@ -17,6 +18,7 @@ class WheelFixed extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            isDialogOpen : false,
             items: exercises, //or this.props.exerciseArr-depands where i puth the array
             shouleStartSpinning: false,
             spinningDuration: 4,
@@ -33,13 +35,14 @@ class WheelFixed extends React.Component {
         
         if (this.state.shouleStartSpinning) {
             setTimeout(() => {
-                this.setState({ shouleStartSpinning: false, selectedItem: null })
+                this.setState({ shouleStartSpinning: false, selectedItem: null ,isDialogOpen:true})
                 console.log(winnerItem)
                 console.log(
                     `you won ${this.state.items[winnerItem]} exercise!`)
             }, this.state.spinningDuration * 1000)
             //this makes the design return to it's start point and not continue from the last position.
         }
+        
         const wheelVars = {
             '--nb-item': this.state.items.length,
             '--selected-item': this.state.selectedItem,
@@ -47,6 +50,7 @@ class WheelFixed extends React.Component {
         }
         return (
             <div className="wheel-container">
+            {this.state.isDialogOpen?<Dialog winnerItem={this.state.items[winnerItem]}/>:''}
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
                     style={wheelVars}

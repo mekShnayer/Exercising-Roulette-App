@@ -10,6 +10,7 @@ import Workout from './pages/Workout';
 import PersonalZone from './pages/PersonalZone';
 import WheelFixed from './components/WheelFixed';
 
+
 // const exerciseArr = ['body', 'legs', 'hands', 'core', 'cardio', 'stretch', 'body'
     // , 'legs', 'hands', 'core', 'cardio', 'stretch',];
 
