@@ -50,7 +50,9 @@ class WheelFixed extends React.Component {
         }
         return (
             <div className="wheel-container">
-            {this.state.isDialogOpen?<Dialog winnerItem={this.state.items[winnerItem]}/>:''}
+                                            {/*  */}
+            {this.state.isDialogOpen?<Dialog winnerItem={this.state.items[winnerItem]} onClose={(e)=>this.setState({isDialogOpen:false})} />:''}
+                                            {/*  */}
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
                     style={wheelVars}
