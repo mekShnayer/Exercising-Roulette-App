@@ -1,12 +1,38 @@
-.dialog-box {
-    background-color: blanchedalmond;
+.dialog-page {
+    position: fixed;
+    background-color: #00ffff54;
+    left: 0;
+    z-index: 2;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    top: 0;
 }
+
+.dialog-box {
+    justify-items: center;
+    display: flex;
+    height: fit-content;
+    justify-self: center;
+    align-self: center;
+    margin: auto;
+    background-color: cadetblue;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+button {
+    border: rgba(158, 67, 67, 0.418) solid 1px;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgba(252, 248, 249, 0.452);
+}
+
 .dialog-close-button {
     border-radius: 50%;
+    height: fit-content;
 }
-button {
-    
-}
+
 .dialog-answers-box {
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }

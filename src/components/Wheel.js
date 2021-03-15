@@ -1,20 +1,19 @@
 import React from 'react';
-import './WheelFixed.css';
+import './Wheel.css';
 import Dialog from './Dialog';
 
 const exercises = [
-    '0',
-    '1',
-    '2',
-    '3',
-    '4',
-    '5',
-    '6',
-    '7',
+    'legs',
+    'arms',
+    'core',
+    'full-body',
+    'cardio',
+    'stretch',
+    
 ]
 
 let winnerItem;
-class WheelFixed extends React.Component {
+class Wheel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -40,7 +39,7 @@ class WheelFixed extends React.Component {
                 console.log(
                     `you won ${this.state.items[winnerItem]} exercise!`)
             }, this.state.spinningDuration * 1000)
-            //this makes the design return to it's start point and not continue from the last position.
+            
         }
         
         const wheelVars = {
@@ -56,7 +55,6 @@ class WheelFixed extends React.Component {
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
                     style={wheelVars}
-                // onClick={onWheelClicked}
                 >
                     {this.state.items.map((item, index) => (
                         <div className="wheel-item" key={index}
@@ -65,7 +63,7 @@ class WheelFixed extends React.Component {
                         </div>
                     ))}
                 </div>
-                <button onClick={this.state.onButtonClick}>
+                <button className='spin-button' onClick={this.state.onButtonClick}>
                     spin
                 </button>
             </div>
@@ -73,4 +71,4 @@ class WheelFixed extends React.Component {
     }
 }
 
-export default WheelFixed;
+export default Wheel;
