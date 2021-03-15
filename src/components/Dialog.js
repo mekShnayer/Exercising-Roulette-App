@@ -27,12 +27,14 @@ class Dialog extends React.Component {
         return (
             <div className='dialog-page'>
                 <div className='dialog-box'>
-                    
+
                     <div>
                         <h1>Ready to start {this.props.winnerItem} exercise?</h1>
-                        
+
                         <div className='dialog-answers-box'>
-                            <button onClick={() => this.openWorkout(this.props.winnerItem)}>YES! let's go!</button>
+                            <button onClick={() => this.openWorkout(this.props.winnerItem)}>
+                                <Link to='/workout' style={{textDecoration:'none',color:'black'}}>YES! let's go!</Link>
+                            </button>
                             <button onClick={this.props.onClose}>Nope, let's try again</button>
                         </div>
                     </div>

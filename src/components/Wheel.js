@@ -9,7 +9,7 @@ const exercises = [
     'full-body',
     'cardio',
     'stretch',
-    
+
 ]
 
 let winnerItem;
@@ -17,7 +17,7 @@ class Wheel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDialogOpen : false,
+            isDialogOpen: false,
             items: exercises, //or this.props.exerciseArr-depands where i puth the array
             shouleStartSpinning: false,
             spinningDuration: 4,
@@ -31,17 +31,17 @@ class Wheel extends React.Component {
     }
 
     render() {
-        
+
         if (this.state.shouleStartSpinning) {
             setTimeout(() => {
-                this.setState({ shouleStartSpinning: false, selectedItem: null ,isDialogOpen:true})
+                this.setState({ shouleStartSpinning: false, selectedItem: null, isDialogOpen: true })
                 console.log(winnerItem)
                 console.log(
                     `you won ${this.state.items[winnerItem]} exercise!`)
             }, this.state.spinningDuration * 1000)
-            
+
         }
-        
+
         const wheelVars = {
             '--nb-item': this.state.items.length,
             '--selected-item': this.state.selectedItem,
@@ -49,9 +49,9 @@ class Wheel extends React.Component {
         }
         return (
             <div className="wheel-container">
-                                            {/*  */}
-            {this.state.isDialogOpen?<Dialog winnerItem={this.state.items[winnerItem]} onClose={(e)=>this.setState({isDialogOpen:false})} />:''}
-                                            {/*  */}
+                {/*  */}
+                {this.state.isDialogOpen ? <Dialog winnerItem={this.state.items[winnerItem]} onClose={(e) => this.setState({ isDialogOpen: false })} /> : ''}
+                {/*  */}
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
                     style={wheelVars}
