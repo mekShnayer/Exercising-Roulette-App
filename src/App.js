@@ -1,18 +1,10 @@
-
 import './App.css';
-
 import Logo from './components/logo';
 import logoPic from './components/logo.png';
-
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import HomeRoulette from './pages/HomeRoulette';
 import Workout from './pages/Workout';
 import PersonalZone from './pages/PersonalZone';
-import Wheel from './components/Wheel';
-
-
-// const exerciseArr = ['body', 'legs', 'hands', 'core', 'cardio', 'stretch', 'body'
-// , 'legs', 'hands', 'core', 'cardio', 'stretch',];
 
 function App() {
   return (
@@ -28,17 +20,12 @@ function App() {
             </ul>
           </div>
         </div>
-
-        
-
-
         <div className='pages-display'>
           <Switch>
             <Route exact path='/' component={HomeRoulette} />
             <Route exact path='/personalZone' component={PersonalZone} />
             <Route exact path='/workout' component={Workout} />
           </Switch>
-          
         </div>
       </div>
     </Router>
