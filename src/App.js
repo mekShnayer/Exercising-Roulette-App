@@ -38,8 +38,7 @@ function App() {
             <Route exact path='/personalZone' component={PersonalZone} />
             <Route exact path='/workout' component={Workout} />
           </Switch>
-          <div className='filter-box'> filter-box component: tabata / reps / random</div>
-          <Wheel />
+          
         </div>
       </div>
     </Router>
