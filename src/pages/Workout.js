@@ -1,5 +1,7 @@
 import React from 'react';
-const rest = { name: 'rest', visual: 'rest photo', time: 10 }
+import Timer from '../components/Timer';
+
+const rest = { name: 'rest', visual: 'rest photo', time: 10 };
 let legworkout = [
     { name: '1', visual: '', time: 20 },
     rest,
@@ -17,23 +19,31 @@ let legworkout = [
     rest,
     { name: '8', visual: '', time: 20 },
     rest,
-
 ]
+class Workout extends React.Component {
+    render() {
+        let exercises = legworkout.map((exercise, index) => {
+            let exerciseDiv = (
+                <div key={index}>
+                    <h1>exercise name : {exercise.name}</h1>
+                    <div> exercise visual : {exercise.visual}</div>
+                    <h2>exercise time : {exercise.time}</h2>
+                </div>
+            )
+            return (
+                <div>{exerciseDiv}</div>
+            )
+        });
 
-
-
-function Workout(workout,legworkout) {
-    let work = workout.map(exercise => {
-        const work = (
+        return (
             <div>
-                <h1>{exercise.name}</h1>
-                <img src={exercise.visual} />
-                <h2>timer: {exercise.time}</h2>
+                <Timer time={legworkout[0].time} />
+                {exercises}
             </div>
+
         )
-        setTimeout(work, exercise.time*1000)
-    })
-    return ({work})
+
+    }
 }
 
 export default Workout;
