@@ -1,18 +1,16 @@
 import React from 'react';
-
+import './timer.css';
 class Timer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            time: 0,
-            endTime: this.props.time,
-
+            time: this.props.time,
         }
     }
     updateTime = () => {
-        let { time, endTime } = this.state;
-        if (time < endTime + 1) {
-            this.setState({ time: this.state.time + 1 })
+        let { time } = this.state;
+        if (time !== 0) {
+            this.setState({ time: this.state.time - 1 })
         } else { clearInterval(this.timer) }
     }
     timer = () => {
@@ -24,19 +22,21 @@ class Timer extends React.Component {
         this.timer();
     }
     render() {
-        let { time, endTime } = this.state;
-        console.log(time, endTime)
-        return (time < endTime + 1 ? (
-            <div style={{backgroundColor: 'pink'}}>
-                time: {time} , endtime: {endTime}
+        let { time } = this.state;
+        return (time !== 0 ? (
+            <div className='timer-box' >
+                time: {time}
             </div>
-        ) : (<div style={{backgroundColor: 'pink'}}>end of time!</div>
+        ) : (<div className='timer-box' >end of time!</div>
         )
         )
     }
 
     componentWillUnmount() {
         clearInterval(this.timer);
+        this.setState = (state,callback) =>{
+            return;
+        }
     }
 }
 
