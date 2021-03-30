@@ -55,6 +55,12 @@ class Workout extends React.Component {
   componentDidMount() {
     this.updateIndexInterval();
   }    
+  componentWillUnmount() {
+            clearInterval(this.updateIndexInterval);
+            this.setState = (state, callback) => {
+                return;
+            }
+        }
 
   render() {
     let { exerciseArr, index } = this.state;
