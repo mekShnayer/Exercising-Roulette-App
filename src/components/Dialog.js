@@ -4,9 +4,6 @@ import { Link } from 'react-router-dom';
 // import Workout from '../pages/Workout';
 
 class Dialog extends React.Component {
-    openWorkout(winnerItem) {
-        return;
-    }
     render() {
         return (
             <div className='dialog-page'>
@@ -14,7 +11,7 @@ class Dialog extends React.Component {
                     <div>
                         <h1>Ready to start {this.props.winnerItem} exercise?</h1>
                         <div className='dialog-answers-box'>
-                            <button onClick={() => this.openWorkout(this.props.winnerItem)}>
+                            <button>
                                 <Link to='/workout'
                                     style={{ textDecoration: 'none', color: 'black' }}>
                                     YES! let's go!
