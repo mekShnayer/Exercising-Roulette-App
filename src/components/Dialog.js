@@ -1,7 +1,6 @@
 import React from 'react';
 import './Dialog.css';
 import { Link } from 'react-router-dom';
-// import Workout from '../pages/Workout';
 
 class Dialog extends React.Component {
     render() {
