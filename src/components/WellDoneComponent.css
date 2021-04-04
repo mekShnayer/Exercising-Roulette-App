@@ -1,0 +1,29 @@
+.wellDone-page {
+  position: fixed;
+  background-color: #54fd6aa1;
+  left: 0;
+  z-index: 2;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  top: 0;
+  
+}
+
+.wellDone-box {
+  justify-items: center;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  justify-self: center;
+  align-self: center;
+  margin: auto;
+  background-color: rgb(144, 110, 235);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.stats {
+  border: aqua 1px solid;
+}
+

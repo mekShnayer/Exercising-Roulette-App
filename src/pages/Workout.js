@@ -1,5 +1,6 @@
 import React from "react";
 import Timer from '../components/Timer';
+import WellDoneComponent from "../components/WellDoneComponent";
 import { winnerItem, workouts } from '../components/Wheel';
 
 // const rest = { name: "rest", visual: "rest photo", time: 10 };
@@ -33,7 +34,8 @@ class Workout extends React.Component {
     this.state = {
       index: 0,
       exerciseArr: workouts[winnerItem].exercisesArr,
-      workout: workouts[winnerItem]
+      workout: workouts[winnerItem],
+      isWorkoutDone: false
     };
   }
 
@@ -41,13 +43,16 @@ class Workout extends React.Component {
     let { index, exerciseArr } = this.state;
     if (index < exerciseArr.length - 1) {
       this.setState({ index: index + 1 });
+      console.log(this.state)
+    }else if(index === exerciseArr.length-1){
+      this.setState({isWorkoutDone:true})
     }
   }
 
   async updateIndexInterval() {
     let { exerciseArr } = this.state;
     // let time = exerciseArr[index].time;
-    for (let idx = 0; idx < exerciseArr.length - 1; idx++) {
+    for (let idx = 0; idx <= exerciseArr.length - 1; idx++) {
       let time = exerciseArr[idx].time;
       await timeout(time * 1000);
       this.updateIndex();
@@ -64,7 +69,6 @@ class Workout extends React.Component {
       return;
     }
   }
-
   render() {
     let { exerciseArr, index } = this.state;
     let name = exerciseArr[index].exerciseName;
@@ -73,6 +77,10 @@ class Workout extends React.Component {
     return (
       <div>
         <div>
+        {this.state.isWorkoutDone ? <WellDoneComponent workout={this.state.workout.workoutName}
+          onClose={(e) => this.setState({ isWorkoutDone: false })
+          }
+        /> : ''}
           <div className="exercise-box" key={index}>
             <h1>{this.state.workout.workoutName} workout</h1>
             <h2>exercise name : {name}</h2>
