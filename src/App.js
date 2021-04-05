@@ -14,6 +14,7 @@ function App() {
           <Logo src={logoPic} />
           <div className='change-pages-link'>
             <ul className='link-list'>
+            {/* use navLink */}
               <li><Link to="/">Home</Link></li>
               <li><Link to="/personalZone">Personal Zone</Link></li>
               <li><Link to="/workout">Workout</Link></li>

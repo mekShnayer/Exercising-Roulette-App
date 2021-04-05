@@ -37,9 +37,9 @@ const rest = { exerciseName: "rest", visual:Rest, time: 10 };
 export const workouts = [
     {
         workoutName: 'legs', exercisesArr: [
-            { exerciseName: "1", visual: squat, time: 10 },
+            { exerciseName: "1", visual: squat, time: 20 },
             rest,
-            { exerciseName: "2", visual: lunge, time: 10 },
+            { exerciseName: "2", visual: lunge, time: 30 },
             rest,
             { exerciseName: "3", visual: donkeyKicks, time: 10 },
             rest,
@@ -170,7 +170,6 @@ class Wheel extends React.Component {
             onButtonClick: () => {
                 winnerItem = Math.floor(Math.random() * this.state.items.length);
                 this.setState({ selectedItem: winnerItem, shouleStartSpinning: true })
-
             }
         }
     }
