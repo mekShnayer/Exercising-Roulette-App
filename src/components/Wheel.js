@@ -1,6 +1,7 @@
 import React from 'react';
 import './Wheel.css';
 import Dialog from './Dialog';
+
 import backExtentions from './exercise-images/back-extentions.jpg';
 import benchDips from './exercise-images/bench-dips.jpg';
 import buttKicks from './exercise-images/but-kicks.jpg';
@@ -12,6 +13,17 @@ import jumpingJacks from './exercise-images/jumping-jacks.jpg';
 import legUps from './exercise-images/leg-up.jpg';
 import lunge from './exercise-images/lunge.jpg';
 import Rest from './exercise-images/rest.jpeg';
+import squat from './exercise-images/Squat.jpg';
+import plank from './exercise-images/plank.jpg';
+import quadStretch from './exercise-images/QuadStretch.jpg';
+import runKneeUp from './exercise-images/run-knee-up.jpg';
+import shoulderStretch from './exercise-images/ShoulderStretch.jpg';
+import situps from './exercise-images/situps.jpg';
+import skaters from './exercise-images/Skaters.png';
+import skiJumps from './exercise-images/ski-jumps.gif';
+import upperBackStretch from './exercise-images/UpperBackStretch.jpg';
+import pushUps from './exercise-images/pushUps.gif';
+import widePushUps from './exercise-images/widePushUps.gif';
 
 export const exercises = [
     'legs',
@@ -21,126 +33,126 @@ export const exercises = [
     'cardio',
     'stretch',
 ]
-const rest = { name: "rest", visual: {Rest}, time: 10 };
+const rest = { exerciseName: "rest", visual:Rest, time: 10 };
 export const workouts = [
     {
         workoutName: 'legs', exercisesArr: [
-            { exerciseName: "1", visual: "squat", time: 10 },
+            { exerciseName: "1", visual: squat, time: 10 },
             rest,
-            { exerciseName: "2", visual: "lounge", time: 10 },
+            { exerciseName: "2", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "3", visual: "donkey kicks", time: 10 },
+            { exerciseName: "3", visual: donkeyKicks, time: 10 },
             rest,
-            { exerciseName: "4", visual: "hip abduction", time: 10 },
+            { exerciseName: "4", visual: hipAbduction, time: 10 },
             rest,
-            { exerciseName: "5", visual: "squat", time: 10 },
+            { exerciseName: "5", visual: squat, time: 10 },
             rest,
-            { exerciseName: "6", visual: "lounge", time: 10 },
+            { exerciseName: "6", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "7", visual: "donkey kicks", time: 10 },
+            { exerciseName: "7", visual: donkeyKicks, time: 10 },
             rest,
-            { exerciseName: "8", visual: "hip abduction", time: 10 },
+            { exerciseName: "8", visual: hipAbduction, time: 10 },
             rest
         ],
     },
     {
         workoutName: 'arms', exercisesArr: [
-            { exerciseName: "1", visual: "bench-dips", time: 10 },
+            { exerciseName: "1", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "2", visual: "push-ups", time: 10 },
+            { exerciseName: "2", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "3", visual: "arm adduction", time: 10 },
+            { exerciseName: "3", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "4", visual: "arm abduction", time: 10 },
+            { exerciseName: "4", visual: widePushUps, time: 10 },
             rest,
-            { exerciseName: "5", visual: "bench-dips", time: 10 },
+            { exerciseName: "5", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "6", visual: "push-ups", time: 10 },
+            { exerciseName: "6", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "7", visual: "arm adduction", time: 10 },
+            { exerciseName: "7", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "8", visual: "arm abduction", time: 10 },
+            { exerciseName: "8", visual: widePushUps, time: 10 },
             rest
         ],
     },
     {
         workoutName: 'core', exercisesArr: [
-            { exerciseName: "1", visual: "leg-up", time: 10 },
+            { exerciseName: "1", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "2", visual: "plank", time: 10 },
+            { exerciseName: "2", visual: plank, time: 10 },
             rest,
-            { exerciseName: "3", visual: "sit-ups", time: 10 },
+            { exerciseName: "3", visual: situps, time: 10 },
             rest,
-            { exerciseName: "4", visual: "back-extentions", time: 10 },
+            { exerciseName: "4", visual: backExtentions, time: 10 },
             rest,
-            { exerciseName: "5", visual: "leg-up", time: 10 },
+            { exerciseName: "5", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "6", visual: "plank", time: 10 },
+            { exerciseName: "6", visual: plank, time: 10 },
             rest,
-            { exerciseName: "7", visual: "sit-ups", time: 10 },
+            { exerciseName: "7", visual: situps, time: 10 },
             rest,
-            { exerciseName: "8", visual: "back-extentions", time: 10 },
+            { exerciseName: "8", visual: backExtentions, time: 10 },
             rest
         ],
     },
     {
         workoutName: 'full-body', exercisesArr: [
-            { exerciseName: "1", visual: "squat", time: 10 },
+            { exerciseName: "1", visual: squat, time: 10 },
             rest,
-            { exerciseName: "2", visual: "lounge", time: 10 },
+            { exerciseName: "2", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "3", visual: "bench-dip", time: 10 },
+            { exerciseName: "3", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "4", visual: "push-ups", time: 10 },
+            { exerciseName: "4", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "5", visual: "leg-up", time: 10 },
+            { exerciseName: "5", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "6", visual: "plank", time: 10 },
+            { exerciseName: "6", visual: plank, time: 10 },
             rest,
-            { exerciseName: "7", visual: "sit-ups", time: 10 },
+            { exerciseName: "7", visual: situps, time: 10 },
             rest,
-            { exerciseName: "8", visual: "back-extentions", time: 10 },
+            { exerciseName: "8", visual: backExtentions, time: 10 },
             rest
         ],
     },
     {
         workoutName: 'cardio', exercisesArr: [
-            { exerciseName: "1", visual: "jumping-jacks", time: 10 },
+            { exerciseName: "1", visual: jumpingJacks, time: 10 },
             rest,
-            { exerciseName: "2", visual: "ski", time: 10 },
+            { exerciseName: "2", visual: skiJumps, time: 10 },
             rest,
-            { exerciseName: "3", visual: "run with your knees up", time: 10 },
+            { exerciseName: "3", visual: runKneeUp, time: 10 },
             rest,
-            { exerciseName: "4", visual: "butt kicks", time: 10 },
+            { exerciseName: "4", visual: buttKicks, time: 10 },
             rest,
-            { exerciseName: "5", visual: "squat-walk", time: 10 },
+            { exerciseName: "5", visual: squat, time: 10 },
             rest,
-            { exerciseName: "6", visual: "lounge-walk", time: 10 },
+            { exerciseName: "6", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "7", visual: "jumping-jacks", time: 10 },
+            { exerciseName: "7", visual: jumpingJacks, time: 10 },
             rest,
-            { exerciseName: "8", visual: "ski", time: 10 },
+            { exerciseName: "8", visual: skiJumps, time: 10 },
             rest
         ],
     },
     {
         workoutName: 'stretch', exercisesArr: [
-            { exerciseName: "1", visual: "cat-stretch", time: 10 },
-            rest,
-            { exerciseName: "2", visual: "upside-down dog", time: 10 },
-            rest,
-            { exerciseName: "3", visual: "split", time: 10 },
-            rest,
-            { exerciseName: "4", visual: "back-stretch", time: 10 },
-            rest,
-            { exerciseName: "5", visual: "cat-stretch", time: 10 },
-            rest,
-            { exerciseName: "6", visual: "upside-down dog", time: 10 },
-            rest,
-            { exerciseName: "7", visual: "split", time: 10 },
-            rest,
-            { exerciseName: "8", visual: "back-stretch", time: 10 },
-            rest
+            { exerciseName: "1", visual: hamstringStretch, time: 10 },
+           
+            { exerciseName: "2", visual: hipAndBackStretch, time: 10 },
+            
+            { exerciseName: "3", visual: quadStretch, time: 10 },
+            
+            { exerciseName: "4", visual: upperBackStretch, time: 10 },
+           
+            { exerciseName: "5", visual: hamstringStretch, time: 10 },
+          
+            { exerciseName: "6", visual: hipAndBackStretch, time: 10 },
+            
+            { exerciseName: "7", visual:quadStretch, time: 10 },
+            
+            { exerciseName: "8", visual: upperBackStretch, time: 10 },
+           
         ],
     },
 ]

@@ -2,6 +2,7 @@ import React from "react";
 import Timer from '../components/Timer';
 import WellDoneComponent from "../components/WellDoneComponent";
 import { winnerItem, workouts } from '../components/Wheel';
+import './workout.css';
 
 // const rest = { name: "rest", visual: "rest photo", time: 10 };
 // let legworkout = [
@@ -86,8 +87,8 @@ class Workout extends React.Component {
             <h2>exercise name : {name}</h2>
             <div className='visual'
             // style={{backgroundAttachment:URL(visual)}}
-            > exercise visual : {visual}
-            {/* <img src={visual}></img> */}
+            > exercise visual 
+            <img src={visual}></img>
              </div>
             <h2>exercise time : {time}</h2>
             <Timer time={time} />
