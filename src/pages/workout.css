@@ -3,3 +3,10 @@
     padding: 10px;
     border-radius: 10px;
 }
+
+.visual {
+    width:100px;
+    min-height: 100px;
+    background-position: center;
+    
+}

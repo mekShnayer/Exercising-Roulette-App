@@ -1,6 +1,17 @@
 import React from 'react';
 import './Wheel.css';
 import Dialog from './Dialog';
+import backExtentions from './exercise-images/back-extentions.jpg';
+import benchDips from './exercise-images/bench-dips.jpg';
+import buttKicks from './exercise-images/but-kicks.jpg';
+import donkeyKicks from './exercise-images/donkey-kicks.jpg';
+import hamstringStretch from './exercise-images/hamstringStretch.jpg';
+import hipAbduction from './exercise-images/hip-abduction.jpg';
+import hipAndBackStretch from './exercise-images/HipAndBackStretch.jpg';
+import jumpingJacks from './exercise-images/jumping-jacks.jpg';
+import legUps from './exercise-images/leg-up.jpg';
+import lunge from './exercise-images/lunge.jpg';
+import Rest from './exercise-images/rest.jpeg';
 
 export const exercises = [
     'legs',
@@ -10,7 +21,7 @@ export const exercises = [
     'cardio',
     'stretch',
 ]
-const rest = { name: "rest", visual: "rest photo", time: 10 };
+const rest = { name: "rest", visual: {Rest}, time: 10 };
 export const workouts = [
     {
         workoutName: 'legs', exercisesArr: [

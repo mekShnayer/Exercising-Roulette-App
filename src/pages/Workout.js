@@ -84,7 +84,11 @@ class Workout extends React.Component {
           <div className="exercise-box" key={index}>
             <h1>{this.state.workout.workoutName} workout</h1>
             <h2>exercise name : {name}</h2>
-            <div> exercise visual : {visual}</div>
+            <div className='visual'
+            // style={{backgroundAttachment:URL(visual)}}
+            > exercise visual : {visual}
+            {/* <img src={visual}></img> */}
+             </div>
             <h2>exercise time : {time}</h2>
             <Timer time={time} />
           </div>
