@@ -1,8 +1,10 @@
 .timer-box {
-    background-color : rgb(145, 241, 132);
+    background-color: rgb(145, 241, 132);
     border-radius: 20px;
     width: fit-content;
-    margin:auto;
-    padding:5px;
-
+    margin: auto;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
 }

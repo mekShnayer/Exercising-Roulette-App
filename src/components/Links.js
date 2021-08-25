@@ -1,0 +1,14 @@
+import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+
+function Links() {
+  return (
+    <ul className='link-list'>
+      <li><Link to="/">Home</Link></li>
+      <li><Link to="/personalZone">Personal Zone</Link></li>
+      <li><Link to="/workout">Workout</Link></li>
+    </ul>
+  )
+}
+
+export default Links;

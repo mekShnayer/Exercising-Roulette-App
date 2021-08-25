@@ -23,18 +23,23 @@ class Timer extends React.Component {
     }
     render() {
         let { time } = this.state;
-        return (time !== 0 ? (
-            <div className='timer-box' >
-                time: {time}
-            </div>
-        ) : (<div className='timer-box' >end of time!</div>
-        )
+        return (
+            time !== 0 ?
+                (
+                    <div className='timer-box' >
+                        time: {time}
+                    </div>
+                ) : (
+                    <div className='timer-box' >
+                        end of time!
+                    </div>
+                )
         )
     }
 
     componentWillUnmount() {
         clearInterval(this.timer);
-        this.setState = (state,callback) =>{
+        this.setState = (state, callback) => {
             return;
         }
     }

@@ -43,8 +43,9 @@
 .wheel-container::before {
     right: 0;
     top: 43%;
-    
-}.triangle-down {
+}
+
+.triangle-down {
     position: relative;
     width: 0;
     height: 0;
@@ -53,15 +54,16 @@
     border-top: 50px solid black;
     left: 63%;
     z-index: 1;
-    transform:rotate(90deg);
+    transform: rotate(90deg);
     margin-left: 140px;
     margin-right: auto;
-    top: 230px;
+    top: 45%;
 }
 
 .wheel {
     display: block;
-    position: relative;
+    position: absolute;
+    top: 0px;
     box-sizing: content-box;
     margin: auto;
     width: var(--wheel-size);
@@ -72,13 +74,14 @@
     background-color: var(--wheel-color);
     transition: transform var(--reset-duration);
     transform: rotate(0deg);
-    /* cursor: pointer; */
     font-size: x-large;
-} 
+}
+
 .wheel.spinning {
     transition: transform var(--spinning-duration);
     transform: rotate(calc(var(--nb-turn) * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1))));
 }
+
 .wheel::after {
     display: block;
     position: absolute;
@@ -125,6 +128,7 @@
     border-left: solid transparent 0;
     border-right: solid var(--neutral-color) calc(var(--wheel-size) / 2);
 }
+
 .spin-button {
     font-size: x-large;
     background-color: darkcyan;
@@ -132,5 +136,8 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: bold;
     border-radius: 10px;
-    
+    position: absolute;
+    left: 40%;
+    top: 100%;
+    cursor: pointer;
 }

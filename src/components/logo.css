@@ -1,0 +1,12 @@
+#logo {
+  max-width: 400px;
+  max-height: 400px;
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  width: 315px;
+  background-position: center;
+  top: 0;
+  left: 45%;
+  justify-content: flex-start;
+}

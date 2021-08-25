@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Wheel.css';
 import Dialog from './Dialog';
 
@@ -24,7 +24,7 @@ import skiJumps from './exercise-images/ski-jumps.gif';
 import upperBackStretch from './exercise-images/UpperBackStretch.jpg';
 import pushUps from './exercise-images/pushUps.gif';
 import widePushUps from './exercise-images/widePushUps.gif';
-
+import { ThemeContext } from '../context/ThemeContext';
 export const exercises = [
     'legs',
     'arms',
@@ -33,132 +33,132 @@ export const exercises = [
     'cardio',
     'stretch',
 ]
-const rest = { exerciseName: "rest", visual:Rest, time: 10 };
+const rest = { exerciseName: "Rest", visual: Rest, time: 10 };
 export const workouts = [
     {
-        workoutName: 'legs', exercisesArr: [
-            { exerciseName: "1", visual: squat, time: 20 },
+        workoutName: 'Legs', exercisesArr: [
+            { exerciseName: "Squats", visual: squat, time: 30 },
             rest,
-            { exerciseName: "2", visual: lunge, time: 30 },
+            { exerciseName: "Lunges", visual: lunge, time: 30 },
             rest,
-            { exerciseName: "3", visual: donkeyKicks, time: 10 },
+            { exerciseName: "Donkey kicks", visual: donkeyKicks, time: 10 },
             rest,
-            { exerciseName: "4", visual: hipAbduction, time: 10 },
+            { exerciseName: "Hip Abduction", visual: hipAbduction, time: 10 },
             rest,
-            { exerciseName: "5", visual: squat, time: 10 },
+            { exerciseName: "Squats", visual: squat, time: 10 },
             rest,
-            { exerciseName: "6", visual: lunge, time: 10 },
+            { exerciseName: "Lunges", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "7", visual: donkeyKicks, time: 10 },
+            { exerciseName: "Donkey kicks", visual: donkeyKicks, time: 10 },
             rest,
-            { exerciseName: "8", visual: hipAbduction, time: 10 },
+            { exerciseName: "Hip Abduction", visual: hipAbduction, time: 10 },
             rest
         ],
     },
     {
-        workoutName: 'arms', exercisesArr: [
-            { exerciseName: "1", visual: benchDips, time: 10 },
+        workoutName: 'Arms', exercisesArr: [
+            { exerciseName: "Bench dips", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "2", visual: pushUps, time: 10 },
+            { exerciseName: "Push ups", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "3", visual: benchDips, time: 10 },
+            { exerciseName: "Bench dips", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "4", visual: widePushUps, time: 10 },
+            { exerciseName: "Wide push ups", visual: widePushUps, time: 10 },
             rest,
-            { exerciseName: "5", visual: benchDips, time: 10 },
+            { exerciseName: "Bench dips", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "6", visual: pushUps, time: 10 },
+            { exerciseName: "Push ups", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "7", visual: benchDips, time: 10 },
+            { exerciseName: "Bench dips", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "8", visual: widePushUps, time: 10 },
+            { exerciseName: "Wide push ups", visual: widePushUps, time: 10 },
             rest
         ],
     },
     {
-        workoutName: 'core', exercisesArr: [
-            { exerciseName: "1", visual: legUps, time: 10 },
+        workoutName: 'Core', exercisesArr: [
+            { exerciseName: "Leg-Ups", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "2", visual: plank, time: 10 },
+            { exerciseName: "Plank", visual: plank, time: 10 },
             rest,
-            { exerciseName: "3", visual: situps, time: 10 },
+            { exerciseName: "Situps", visual: situps, time: 10 },
             rest,
-            { exerciseName: "4", visual: backExtentions, time: 10 },
+            { exerciseName: "Back Extentions", visual: backExtentions, time: 10 },
             rest,
-            { exerciseName: "5", visual: legUps, time: 10 },
+            { exerciseName: "Leg Ups", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "6", visual: plank, time: 10 },
+            { exerciseName: "Plank", visual: plank, time: 10 },
             rest,
-            { exerciseName: "7", visual: situps, time: 10 },
+            { exerciseName: "Sit ups", visual: situps, time: 10 },
             rest,
-            { exerciseName: "8", visual: backExtentions, time: 10 },
+            { exerciseName: "Back Extentions", visual: backExtentions, time: 10 },
             rest
         ],
     },
     {
-        workoutName: 'full-body', exercisesArr: [
-            { exerciseName: "1", visual: squat, time: 10 },
+        workoutName: 'Full-body', exercisesArr: [
+            { exerciseName: "Squat", visual: squat, time: 10 },
             rest,
-            { exerciseName: "2", visual: lunge, time: 10 },
+            { exerciseName: "Lunge", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "3", visual: benchDips, time: 10 },
+            { exerciseName: "Bench Dips", visual: benchDips, time: 10 },
             rest,
-            { exerciseName: "4", visual: pushUps, time: 10 },
+            { exerciseName: "Push Ups", visual: pushUps, time: 10 },
             rest,
-            { exerciseName: "5", visual: legUps, time: 10 },
+            { exerciseName: "Leg Ups", visual: legUps, time: 10 },
             rest,
-            { exerciseName: "6", visual: plank, time: 10 },
+            { exerciseName: "Plank", visual: plank, time: 10 },
             rest,
-            { exerciseName: "7", visual: situps, time: 10 },
+            { exerciseName: "sit ups", visual: situps, time: 10 },
             rest,
-            { exerciseName: "8", visual: backExtentions, time: 10 },
+            { exerciseName: "Back Extentions", visual: backExtentions, time: 10 },
             rest
         ],
     },
     {
-        workoutName: 'cardio', exercisesArr: [
-            { exerciseName: "1", visual: jumpingJacks, time: 10 },
+        workoutName: 'Cardio', exercisesArr: [
+            { exerciseName: "Jumping Jacks", visual: jumpingJacks, time: 10 },
             rest,
-            { exerciseName: "2", visual: skiJumps, time: 10 },
+            { exerciseName: "Ski Jumps", visual: skiJumps, time: 10 },
             rest,
-            { exerciseName: "3", visual: runKneeUp, time: 10 },
+            { exerciseName: "Run Knees Up", visual: runKneeUp, time: 10 },
             rest,
-            { exerciseName: "4", visual: buttKicks, time: 10 },
+            { exerciseName: "Butt Kicks", visual: buttKicks, time: 10 },
             rest,
-            { exerciseName: "5", visual: squat, time: 10 },
+            { exerciseName: "Squat", visual: squat, time: 10 },
             rest,
-            { exerciseName: "6", visual: lunge, time: 10 },
+            { exerciseName: "Lunge", visual: lunge, time: 10 },
             rest,
-            { exerciseName: "7", visual: jumpingJacks, time: 10 },
+            { exerciseName: "Jumping Jacks", visual: jumpingJacks, time: 10 },
             rest,
-            { exerciseName: "8", visual: skiJumps, time: 10 },
+            { exerciseName: "Ski Jumps", visual: skiJumps, time: 10 },
             rest
         ],
     },
     {
-        workoutName: 'stretch', exercisesArr: [
-            { exerciseName: "1", visual: hamstringStretch, time: 10 },
-           
-            { exerciseName: "2", visual: hipAndBackStretch, time: 10 },
-            
-            { exerciseName: "3", visual: quadStretch, time: 10 },
-            
-            { exerciseName: "4", visual: upperBackStretch, time: 10 },
-           
-            { exerciseName: "5", visual: hamstringStretch, time: 10 },
-          
-            { exerciseName: "6", visual: hipAndBackStretch, time: 10 },
-            
-            { exerciseName: "7", visual:quadStretch, time: 10 },
-            
-            { exerciseName: "8", visual: upperBackStretch, time: 10 },
-           
+        workoutName: 'Stretch', exercisesArr: [
+            { exerciseName: "Hamstring Stretch", visual: hamstringStretch, time: 10 },
+
+            { exerciseName: "Hip And Back Stretch", visual: hipAndBackStretch, time: 10 },
+
+            { exerciseName: "Quad Stretch", visual: quadStretch, time: 10 },
+
+            { exerciseName: "Upper Back Stretch", visual: upperBackStretch, time: 10 },
+
+            { exerciseName: "Hamstring Stretch", visual: hamstringStretch, time: 10 },
+
+            { exerciseName: "Hip And Back Stretch", visual: hipAndBackStretch, time: 10 },
+
+            { exerciseName: "Quad Stretch", visual: quadStretch, time: 10 },
+
+            { exerciseName: "Upper Back Stretch", visual: upperBackStretch, time: 10 },
+
         ],
     },
 ]
 
-export let winnerItem=0;
-class Wheel extends React.Component {
+export let winnerItem = 0;
+class Wheel extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -173,15 +173,16 @@ class Wheel extends React.Component {
             }
         }
     }
+    static contextType = ThemeContext;
 
     render() {
 
         if (this.state.shouleStartSpinning) {
             setTimeout(() => {
                 this.setState({ shouleStartSpinning: false, selectedItem: null, isDialogOpen: true })
-                console.log(winnerItem)
-                console.log(
-                    `you won ${this.state.items[winnerItem]} exercise!`)
+                // console.log(winnerItem)
+                // console.log(
+                //     `you won ${this.state.items[winnerItem]} exercise!`)
             }, this.state.spinningDuration * 1000)
 
         }
@@ -191,8 +192,10 @@ class Wheel extends React.Component {
             '--selected-item': this.state.selectedItem,
             '--spinning-duration': `${this.state.spinningDuration}s`,
         }
+        const { isLightTheme, light, dark } = this.context;
+        const theme = isLightTheme ? light : dark;
         return (
-            <div className="wheel-container">
+            <div className="wheel-container" >
                 {this.state.isDialogOpen ? <Dialog winnerItem={this.state.items[winnerItem]} onClose={(e) => this.setState({ isDialogOpen: false })} /> : ''}
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
@@ -205,7 +208,7 @@ class Wheel extends React.Component {
                         </div>
                     ))}
                 </div>
-                <button className='spin-button' onClick={this.state.onButtonClick}>
+                <button className='spin-button' style={{ background: theme.ui, color: theme.syntax }} onClick={this.state.onButtonClick}>
                     spin
                 </button>
             </div>

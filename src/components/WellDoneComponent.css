@@ -1,13 +1,12 @@
 .wellDone-page {
   position: fixed;
-  background-color: #54fd6aa1;
+  background-color: #24a8e670;
   left: 0;
   z-index: 2;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
   top: 0;
-  
 }
 
 .wellDone-box {
@@ -21,9 +20,20 @@
   background-color: rgb(144, 110, 235);
   padding: 20px;
   border-radius: 30px;
+  font-style: oblique;
+  font-size: x-large;
 }
 
 .stats {
   border: aqua 1px solid;
 }
-
+.close {
+  width: fit-content;
+  margin: auto;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+  
+}

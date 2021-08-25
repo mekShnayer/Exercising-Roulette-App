@@ -5,7 +5,7 @@ const encoragePhrases = ['well done!', 'you did it!', 'hurray!', 'just did it!',
 
 class WellDoneComponent extends React.Component {
     render() {
-        return (
+        return ( 
             <div className='wellDone-page'>
                 <div className='wellDone-box'>
                     <h1>{encoragePhrases[0]}</h1>

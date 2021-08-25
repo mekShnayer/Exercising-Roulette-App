@@ -45,8 +45,8 @@ class Workout extends React.Component {
     if (index < exerciseArr.length - 1) {
       this.setState({ index: index + 1 });
       console.log(this.state)
-    }else if(index === exerciseArr.length-1){
-      this.setState({isWorkoutDone:true})
+    } else if (index === exerciseArr.length - 1) {
+      this.setState({ isWorkoutDone: true })
     }
   }
 
@@ -77,22 +77,19 @@ class Workout extends React.Component {
     const time = exerciseArr[index].time;
     return (
       <div>
-        <div>
         {this.state.isWorkoutDone ? <WellDoneComponent workout={this.state.workout.workoutName}
           onClose={(e) => this.setState({ isWorkoutDone: false })
           }
         /> : ''}
-          <div className="exercise-box" key={index}>
+        <div className="exercise-box" key={index}>
+          <div className='workout-info'>
             <h1>{this.state.workout.workoutName} workout</h1>
-            <h2>exercise name : {name}</h2>
-            <div className='visual'
-            // style={{backgroundAttachment:URL(visual)}}
-            > exercise visual 
-            <img src={visual}></img>
-             </div>
-            <h2>exercise time : {time}</h2>
+            <h2>exercise : {name}</h2>
+            <img src={visual} className='visual'></img>
             <Timer time={time} />
+
           </div>
+
         </div>
       </div>
     );
@@ -101,100 +98,3 @@ class Workout extends React.Component {
 
 export default Workout;
 
-
-
-/////////////////////////////////
-// import React from 'react';
-// import Timer from '../components/Timer';
-// import './workout.css';
-
-// const rest = { name: 'rest', visual: 'rest photo', time: 10 };
-// let legworkout = [
-//     { name: '1', visual: '', time: 5 },
-//     rest,
-//     { name: '2', visual: '', time: 20 },
-//     rest,
-//     { name: '3', visual: '', time: 30 },
-//     rest,
-//     { name: '4', visual: '', time: 40 },
-//     rest,
-//     { name: '5', visual: '', time: 30 },
-//     rest,
-//     { name: '6', visual: '', time: 20 },
-//     rest,
-//     { name: '7', visual: '', time: 10 },
-//     rest,
-//     { name: '8', visual: '', time: 20 },
-//     rest,
-// ]
-// class Workout extends React.Component {
-//     constructor(props) {
-//         super(props);
-
-//         this.state = {
-//             exerciseArr: legworkout,
-//             index: 0,
-//         }
-//     }
-//     updateIndex = () => {
-//         let { index, exerciseArr } = this.state;
-//         if (index < exerciseArr.length - 1) {
-//             this.setState({ index: index + 1 })
-//         }
-
-//     }
-
-//     updateIndexInterval = () => {
-//         console.log('[updateIndexInterval]')
-
-//         const intervalID = setInterval(() => {
-//             this.updateIndex()
-//             // clearInterval(intervalID)
-//             // console.log('[updateInterval] interval time 2:', time, 'index:', index)
-//         }, this.time());
-//         // clearInterval(intervalID)
-
-//     }
-// time = () => {
-//     return this.state.exerciseArr[this.state.index].time* 1000
-// }
-//     componentDidMount() {
-//         console.log('componentDidMount')
-//         // let { index, exerciseArr } = this.state;
-//         // for(let i=0; i<exerciseArr.length; i++){
-//         this.updateIndexInterval();
-//         // }
-//     }
-//     // componentDidUpdate() {
-//     //     this.updateIndexInterval();
-//     // }
-//     render() {
-//         let { exerciseArr, index } = this.state;
-//         let name = exerciseArr[index].name;
-//         let visual = exerciseArr[index].visual;
-//         const time = exerciseArr[index].time;
-//         console.log(this.state, '[render] the time is:', time)
-//         return (
-
-//             <div>
-//                 <div>
-//                     <div className='exercise-box'
-//                         key={index}>
-//                         <h1>exercise name : {name}</h1>
-//                         <div> exercise visual : {visual}</div>
-//                         <h2>exercise time : {time}</h2>
-//                         <Timer time={time} />
-//                     </div>
-//                 </div>
-//             </div>
-//         )
-//     }
-//     componentWillUnmount() {
-//         clearInterval(this.updateIndexInterval);
-//         this.setState = (state, callback) => {
-//             return;
-//         }
-//     }
-// }
-
-// export default Workout;
