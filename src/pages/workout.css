@@ -19,19 +19,20 @@ h2 {
     font-weight: lighter;
 }
 
-.visual, img {
+.visual {
     max-width: 400px;
     min-height: 100px;
     background-position: center;
     display: flex;
     flex-direction: column;
     margin: auto;
-    max-height: 400px;
-    /* justify-self: center;
-    align-self: center; */
+    max-height: 400 px;
+    justify-self: center;
+    align-self: center;
     width: 315px;
+    height: 400px;
     top: 0;
-    /* left: 45%; */
-    /* justify-content: flex-start; */
+    left: 45%;
+    justify-content: flex-start;
     border-radius: 20%;
 }

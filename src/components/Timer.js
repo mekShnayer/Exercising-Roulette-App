@@ -24,16 +24,11 @@ class Timer extends React.Component {
     render() {
         let { time } = this.state;
         return (
-            time !== 0 ?
-                (
-                    <div className='timer-box' >
-                        time: {time}
-                    </div>
-                ) : (
-                    <div className='timer-box' >
-                        end of time!
-                    </div>
-                )
+
+            <div className='timer-box' >
+                {time !== 0 ? 'time:' + time : 'end of time'}
+            </div>
+
         )
     }
 
