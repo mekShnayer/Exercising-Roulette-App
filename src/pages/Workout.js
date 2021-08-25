@@ -31,7 +31,7 @@ function timeout(ms) {
 class Workout extends React.Component {
   constructor(props) {
     super(props);
-
+ 
     this.state = {
       index: 0,
       exerciseArr: workouts[winnerItem].exercisesArr,

@@ -3,10 +3,10 @@ import './logo.css'
 class Logo extends React.Component {
     render() {
         return (
-
-            <img src={this.props.src} alt='something'
-                id='logo'
-            />
+<div id='logo'></div>
+            // <img src={this.props.src} alt='something'
+            //     id='logo'
+            // />
         )
     }
 }

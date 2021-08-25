@@ -1,5 +1,9 @@
 html, body {
   height: 100vh;
+  background-image: url('./components/workout-background.jpg');
+  object-fit: contain;
+  background-size: cover;
+  
 }
 
 .App {
@@ -12,7 +16,6 @@ html, body {
 
 .header {
   display: flex;
-  background-color: rgb(255, 255, 255);
   width: 100%;
   flex-direction: row-reverse;
   align-items: center;
@@ -20,6 +23,7 @@ html, body {
   padding: 1px;
   margin-bottom: 15px;
   font-size: 25px;
+  font-weight: bolder;
   height: 190px;
   /* border: springgreen solid 3px; */
 }

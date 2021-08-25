@@ -1,12 +1,9 @@
 #logo {
-  max-width: 400px;
-  max-height: 200px;
-  display: flex;
-  justify-self: center;
-  align-self: center;
-  width: 315px;
-  background-position: center;
-  top: 0;
-  left: 45%;
-  justify-content: flex-start;
+  width: 200px;
+  height: 200px;
+  background-image: url('./logo.png');
+  background-size: cover;
+  border-radius: 200%;
+background-position-x: 5px;
+background-position-y: -20px;
 }

@@ -25,6 +25,7 @@ function App() {
             </Switch>
           </div>
         </ThemeContextProvider>
+        <p>background photo from <a href='https://www.freepik.com/photos/background'>Background photo created by freepik - www.freepik.com</a></p>
       </div>
     </Router>
   );
