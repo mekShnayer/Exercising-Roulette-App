@@ -60,4 +60,6 @@ li {
 .pages-display {
   /* border: rgb(20, 32, 32) solid 3px; */
   height: inherit;
+  display: flex;
+  flex-direction: row;
 }

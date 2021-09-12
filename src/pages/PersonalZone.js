@@ -7,7 +7,7 @@ function PersonalZone() {
             <h2>
                 under construction
             </h2>
-            <img src={underConstructionPhoto} />
+            <img src={underConstructionPhoto} alt='' />
         </div>
     )
 }

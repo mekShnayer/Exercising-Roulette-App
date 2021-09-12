@@ -17,9 +17,9 @@ import squat from './exercise-images/Squat.jpg';
 import plank from './exercise-images/plank.jpg';
 import quadStretch from './exercise-images/QuadStretch.jpg';
 import runKneeUp from './exercise-images/run-knee-up.jpg';
-import shoulderStretch from './exercise-images/ShoulderStretch.jpg';
+// import shoulderStretch from './exercise-images/ShoulderStretch.jpg';
 import situps from './exercise-images/situps.jpg';
-import skaters from './exercise-images/Skaters.png';
+// import skaters from './exercise-images/Skaters.png';
 import skiJumps from './exercise-images/ski-jumps.gif';
 import upperBackStretch from './exercise-images/UpperBackStretch.jpg';
 import pushUps from './exercise-images/pushUps.gif';
@@ -163,14 +163,15 @@ class Wheel extends Component {
         super(props);
         this.state = {
             isDialogOpen: false,
-            items: exercises, //or this.props.exerciseArr-depands where i puth the array
+            items: exercises, //this.context?
+            //destructering down at the render may help.
             shouleStartSpinning: false,
             spinningDuration: 4,
-            selectedItem: null,
+            selectedItem: null,//this.context?
             onButtonClick: () => {
                 winnerItem = Math.floor(Math.random() * this.state.items.length);
                 this.setState({ selectedItem: winnerItem, shouleStartSpinning: true })
-            }
+            } 
         }
     }
     static contextType = ThemeContext;
@@ -196,7 +197,7 @@ class Wheel extends Component {
         const theme = isLightTheme ? light : dark;
         return (
             <div className="wheel-container" >
-                {this.state.isDialogOpen ? <Dialog winnerItem={this.state.items[winnerItem]} onClose={(e) => this.setState({ isDialogOpen: false })} /> : ''}
+                {this.state.isDialogOpen ? <Dialog winnerItem={winnerItem} winnerItemTitle={this.state.items[winnerItem]} onClose={(e) => this.setState({ isDialogOpen: false })} /> : ''}
                 <div className="triangle-down"></div>
                 <div className={`wheel ${this.state.shouleStartSpinning ? 'spinning' : ''}`}
                     style={wheelVars}

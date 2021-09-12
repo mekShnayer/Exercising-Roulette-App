@@ -18,7 +18,7 @@ class WellDoneComponent extends React.Component {
                         </p>
                     </div>
 
-                    <div>share div: photo, share to facebook</div>
+                    {/* <div>share div: photo, share to facebook</div> */}
                     <button className='close' onClick={this.props.onClose}>X</button>
                 </div>
             </div>

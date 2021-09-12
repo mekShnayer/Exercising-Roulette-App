@@ -9,15 +9,16 @@ class Dialog extends React.Component {
         console.log(this.context);//it logs it twice! need to check what's wrong!!!
         const { isLightTheme, light, dark } = this.context;
         const theme = isLightTheme ? light : dark;
+        const { winnerItemTitle, winnerItem } = this.props
         return (
             <div className='dialog-page' >
                 <div className='dialog-box'
                     style={{ background: theme.ui, color: theme.syntax }}>
                     <div>
-                        <h1>Ready to start {this.props.winnerItem} exercise?</h1>
+                        <h1>Ready to start {winnerItemTitle} exercise?</h1>
                         <div className='dialog-answers-box'>
                             <button>
-                                <Link to='/workout'
+                                <Link to={{pathname: '/workout', search: `?workoutId=${winnerItem}`}}
                                     style={{ textDecoration: 'none', color: 'black' }}>
                                     YES! let's go!
                                 </Link>
