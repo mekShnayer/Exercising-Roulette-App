@@ -16,7 +16,7 @@ function HomeRoulette() {
                             
                             return (
                                 <div >
-                                    <div className='filter-box' style={{ background: theme.ui, color: theme.syntax }}> filter-box component: tabata / reps / random</div>
+                                    {/* <div className='filter-box' style={{ background: theme.ui, color: theme.syntax }}> filter-box component: tabata / reps / random</div> */}
                                     <Wheel />
                                     <ChooseExercise />
                                 </div>
