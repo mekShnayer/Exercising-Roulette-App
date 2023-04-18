@@ -19,7 +19,7 @@ function App() {
           <GlobalStateContextProvider>
             <div className='header'>
               <Logo src={logoPic} />
-              <Links />
+              <Links /> 
             </div>
             <div className='pages-display'>
               <Switch>
